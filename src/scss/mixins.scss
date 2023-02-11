@@ -1,0 +1,55 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin list-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin margin-padding ($property, $top: 0, $right: 0, $bottom: 0, $left: 0) {
+    #{$property}-top: $top;
+    #{$property}-right: $right;
+    #{$property}-bottom: $bottom;
+    #{$property}-left: $left;
+}
+
+
+
+@mixin media($breakpoint) {
+
+    @if $breakpoint ==tablet {
+        @media all and (min-width: 481px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==desktop {
+        @media all and (min-width: 993px) {
+            @content;
+        }
+    }
+}
+
+@mixin text-style($font, $weight, $size, $color, $n) {
+    font-family: $font;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $n;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    text-align: center;
+    color: $color;
+}
+
+@mixin block-display($display, $direction, $content, $align) {
+    display: $display;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $content;
+}

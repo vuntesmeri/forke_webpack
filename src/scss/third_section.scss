@@ -1,0 +1,113 @@
+.pr {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    padding: 0px;
+    background-image: url(../img/third_section/testmonials-bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    @include media(tablet) {
+        background-image: url(../img/third_section/testmonials-bg2.png);
+    }
+
+    @include media(desktop) {
+        background-position: center 7px;
+        background-image: url(../img/third_section/testmonials-bg3.png);
+    }
+}
+
+.pr_container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include block-display(flex, column, space-between, center);
+}
+
+.pr__title {
+    justify-content: center;
+    @include text-style("Montserrat", 700, 36px, #FFFFFF, 1.33);
+    padding: 90px 10px 60px 10px;
+}
+
+.pr__articles {
+    margin: 0px auto;
+    display: grid;
+    grid-template-rows: repeat(6 1fr);
+    row-gap: 30px;
+
+    @include media(tablet) {
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 50px;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+    }
+
+    @include media(desktop) {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 25px;
+    }
+}
+
+.article {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    row-gap: 10px;
+}
+
+// sizes for logo
+$sizes : (1 165 43,
+    2 148 50,
+    3 64 64,
+    4 225 24,
+    5 166 34,
+    6 108 34);
+
+@each $i,
+$width,
+$height in $sizes {
+    .article:nth-child(#{$i}) {
+        .article__logo {
+            padding: 0px;
+
+            &_size {
+                width: #{$width}px;
+                height: #{$height}px;
+                background-image: url(../img/third_section/logo-#{$i}.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                margin: auto;
+            }
+        }
+    }
+}
+
+.article__text {
+    width: 80%;
+    @include text-style("Lato", 700, 16px, #FFFFFF, 1.5);
+    justify-content: center;
+    font-style: italic;
+    text-align: center;
+}
+
+.pr__footer {
+    width: 80%;
+
+    &_text {
+        @include text-style('Lato', 400, 14px, #A291A5, 1.5);
+        justify-content: center;
+        margin: 100px 0px 0px 0px;
+        padding-bottom: 18px;
+    }
+
+    & hr {
+        width: 70%;
+        margin-bottom: 0px;
+        border: 1px #645766 solid;
+    }
+}
