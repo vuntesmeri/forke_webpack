@@ -47,7 +47,10 @@ const config = {
         {from:'./src/img/**/*.png', to:'images'}
       ]
       }),
-      new LodashModuleReplacementPlugin,
+    new LodashModuleReplacementPlugin({
+      'collections': true,
+      'paths': true
+    }),
   ],
   optimization: {
     runtimeChunk: 'single',
