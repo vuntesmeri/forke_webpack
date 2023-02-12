@@ -2,7 +2,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const CopyWebpackPlugin  = require("copy-webpack-plugin");
 const isProduction = process.env.NODE_ENV == "production";
 const stylesHandler = MiniCssExtractPlugin.loader;
@@ -47,8 +46,6 @@ const config = {
         {from:'./src/img/**/*.png', to:'images'}
       ]
       }),
-    new LodashModuleReplacementPlugin({
-    }),
   ],
   optimization: {
     runtimeChunk: 'single',
