@@ -130,13 +130,13 @@
     }
 
     & .two {
-        width: 32.3px;
-        transform: translateY(0px) translateX(-6px) rotate(45deg)
+        width: 32px;
+        transform: translateY(0px) translateX(-4px) rotate(45deg)
     }
 
     & .three {
-        width: 32.3px;
-        transform: translateY(-19px) translateX(-6px) rotate(-45deg)
+        width: 32px;
+        transform: translateY(-19px) translateX(-5px) rotate(-45deg)
     }
 
     @include media(tablet) {
