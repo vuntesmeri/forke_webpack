@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
-    "url": "https://github.com/vuntesmeri/forke_webpack.git"
+    "url": "git+https://github.com/vuntesmeri/forke_webpack.git"
   },
   "scripts": {
     "serve": "webpack serve",
