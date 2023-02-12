@@ -1,6 +1,6 @@
 .header_navbar {
     position: relative;
-    max-width: 1200px;
+
     min-width: 320px;
     width: 100%;
     margin: auto;
@@ -9,6 +9,7 @@
 }
 
 .navbar {
+    max-width: 1200px;
     @include block-display(flex, row, space-between, center);
     padding: 25px 10px;
     margin: auto;
@@ -245,7 +246,6 @@
 
 .header_main {
     height: 80vh;
-    max-width: 1200px;
     margin: auto;
     position: relative;
     width: 100%;
@@ -257,6 +257,8 @@
 }
 
 .header__title {
+    max-width: 1200px;
+    margin: auto;
     position: relative;
     @include block-display(flex, column, center, center);
 
