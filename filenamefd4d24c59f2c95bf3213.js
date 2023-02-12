@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkstep_2_webpack=self.webpackChunkstep_2_webpack||[]).push([[503],{649:function(){var e=document.querySelector(".navbar-menu_logo"),t=document.querySelector(".header__menu");e.addEventListener("click",(function(){e.classList.toggle("close-button"),t.classList.toggle("close-menu")}))}},function(e){e(e.s=649)}]);
+//# sourceMappingURL=filenamefd4d24c59f2c95bf3213.js.map
