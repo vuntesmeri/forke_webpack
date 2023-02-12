@@ -48,8 +48,6 @@ const config = {
       ]
       }),
     new LodashModuleReplacementPlugin({
-      'collections': true,
-      'paths': true
     }),
   ],
   optimization: {
