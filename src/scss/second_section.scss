@@ -1,0 +1,198 @@
+
+.features {
+    padding-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &__container {
+        @include flex-center;
+        flex-direction: column;
+    }
+    &__main--img {
+        margin-top: 64px;
+        max-width: 100%;
+        height: auto;
+        @media (min-width: 481px) {
+            align-self: flex-end;
+        }
+
+        @media (min-width: 993px) {
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+            min-height: 350px;
+            max-width: calc(50vw - 5vh);
+        }
+        @media (min-width: 1050px) {
+            max-width: 50vw;
+            max-height: 490px;
+        }
+        // @media (min-width: 1200px) {
+        //     bottom: 5px;
+        // }
+    }
+}
+
+.present {
+    @include flex-center;
+    flex-direction: column;
+
+
+    &__title {
+        @include margin-padding(margin, $top: 130px, $bottom: 27px);
+        font-weight: 700;
+        font-size: 26px;
+        text-align: center;
+        text-transform: uppercase;
+    
+        color: #635C73;
+
+        @media (min-width: 481px) {
+            font-size: 42px;
+        }
+        @media (min-width: 993px) {
+            font-size: 54px;
+        }
+    }
+    &__text {
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+    
+        color: #323232;
+        @media (min-width: 481px) {
+            font-size: 21px;
+        }
+    }
+}
+
+.buttons {
+    @include list-reset;
+    @include flex-center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-top: 36px;
+
+    &__item {
+        @include flex-center;
+        height: 26px;
+        
+        border: 1px solid rgba(27, 31, 36, 0.15);
+        border-radius: 6px;
+
+        &--text, &--score {
+            font-size: 12px;
+        }
+        &--score {
+            padding-right: 5px;
+        }
+        &--left {
+            @include flex-center;
+            width: 70%;
+            column-gap: 5px;
+            height: 100%;
+            padding: 0 5px;
+            margin-right: 5px;
+            border-right: 1px solid rgba(27, 31, 36, 0.15);
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            background-color: #d3d3d376;
+        }
+    }
+}
+
+.result {
+    @include flex-center;
+    flex-direction: column;
+    margin-top: 120px;
+    position: relative;
+
+    @media (min-width: 993px) {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: center;
+        column-gap: 50px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 32px;
+        text-align: center;
+        margin: 0;
+        color: #8D81AC;
+        @media (min-width: 481px) {
+            font-size: 42px;
+        }
+        @media (min-width: 993px) {
+            font-size: 47px;
+        }
+    }
+    // &__section--img {
+    //     max-width: 100%
+    // }
+    &__list {
+        @include list-reset;
+        @include flex-center;
+        flex-direction: column;
+        row-gap: 38px;
+        margin-top: 36px;
+        @media (min-width: 481px) {
+            margin-top: 50px;
+        }
+        @media (min-width: 993px) {
+            margin-top: 0;
+        }
+
+        &--item {
+            display: grid;
+            grid-template-columns: minmax(320px, 1fr);
+            column-gap: 25px;
+            align-items: center;
+            justify-content: center;
+
+            @media (min-width: 481px) {
+                grid-template-columns: 110px 1fr;
+                justify-content: start;
+            }
+            @media (min-width: 993px) {
+                grid-template-columns: 110px 400px;
+                justify-content: start;
+            }
+        }
+        &--img {
+            margin: 0 auto;
+        }
+    }
+    &__description {
+        margin-top: 27px;
+        @media (min-width: 481px) {
+            margin-top: 0;
+        }
+        
+        &--title {
+            margin: 0;
+            font-weight: 400;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 14px;
+            color: #323232;
+            @media (min-width: 481px) {
+                text-align: start;
+            }
+            @media (min-width: 993px) {
+                margin-bottom: 20px;
+            }
+        }
+        &--text {
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+            color: #848E97;
+            @media (min-width: 481px) {
+                text-align: start;
+            }
+        }
+    }
+}
