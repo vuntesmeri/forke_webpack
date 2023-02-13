@@ -106,14 +106,17 @@
     height: 26px;
     @include block-display(flex, column, space-between, flex-end);
 
-    // & .two {
-    //     // width: 26px
-    // }
+    & .one {
+        display: flex;
+    }
 
-    // & .three {
-    //     // width: 26px
-    // }
+    & .two {
+        display: flex;
+    }
 
+    & .three {
+        display: flex;
+    }
 
     @include media(tablet) {
         display: none;
@@ -125,23 +128,25 @@
     height: 24px;
     width: 24px;
 
-    background-image: url(../img/first_section/Logo3.png);
+    background-image: url(../img/first_section/close3.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    // & .one {
-    //     display: none;
-    // }
 
-    // & .two {
-    //     width: 32px;
-    //     transform: translateY(0px) translateX(-2vw) rotate(45deg)
-    // }
+    & .one {
+        display: none;
 
-    // & .three {
-    //     width: 32px;
-    //     transform: translateY(-19px) translateX(-2vw) rotate(-45deg)
-    // }
+    }
+
+    & .two {
+        display: none;
+        float: left;
+    }
+
+    & .three {
+        display: none;
+        float: left
+    }
 
     @include media(tablet) {
         display: none;
