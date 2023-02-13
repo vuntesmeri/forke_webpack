@@ -22,7 +22,7 @@ const config = {
       maxAssetSize: 512000,
       maxEntrypointSize: 512000
   },
-    devtool: "source-map",
+    devtool: "inline-source-map",
     devServer: {
       port: 8800,
       compress: true,
@@ -67,9 +67,19 @@ const config = {
         use: [stylesHandler, "css-loader", "postcss-loader","sass-loader"],
       },
       {
-          test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
           type: "asset",
       },
+      // {
+      //   test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+      //   type: 'asset/resource'
+      // },
+
+      // // Fonts and SVGs: Inline files
+      // {
+      //   test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+      //   type: 'asset/inline'
+      // },
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
