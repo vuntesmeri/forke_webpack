@@ -31,4 +31,3 @@
     1) Верстка блоку "Revolutionary Editor";
     2) Верстка секцій "Here is what you get" та "Fork Subscription Pricing"
 
-
